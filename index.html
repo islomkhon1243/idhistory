@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Исломхон ❤️ Дияра</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-blur blur1"></div>
+  <div class="bg-blur blur2"></div>
+  <canvas id="heartsCanvas"></canvas>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="mini-text">Нам уже</p>
+      <h1>2 месяца вместе 💖</h1>
+      <h2>Исломхон & Дияра</h2>
+      <p class="subtitle">
+        Маленький сайт о большой нежности, тёплых моментах и нашей красивой истории ✨
+      </p>
+
+      <div class="timer-card">
+        <p>Мы вместе уже:</p>
+        <div id="loveTimer" class="timer">2 месяца 0 дней 00:00:00</div>
+      </div>
+
+      <button id="openMessageBtn" class="glow-btn">Открыть секретное послание</button>
+    </div>
+
+    <div class="floating-icons">
+      <span>💗</span>
+      <span>✨</span>
+      <span>🌙</span>
+      <span>💫</span>
+      <span>💖</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="love-note hidden-section" id="messageSection">
+      <div class="section-box reveal">
+        <h3>Для Дияры 💌</h3>
+        <p>
+          Дияра, эти 2 месяца стали для меня особенными. 
+          С тобой всё стало ярче, теплее и красивее. 
+          Спасибо тебе за улыбки, за моменты, за твою нежность и за то,
+          что именно ты делаешь мои дни счастливее.
+        </p>
+        <p>
+          Этот маленький сайт — просто напоминание о том, как ты важна для меня.
+          И это только начало нашей прекрасной истории ❤️
+        </p>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="section-title reveal">
+        <h3>Наши моменты 📸</h3>
+        <p>Самые тёплые кадры, которые хочется пересматривать бесконечно</p>
+      </div>
+
+      <div class="gallery">
+        <div class="photo-card reveal tilt">
+          <img src="images/photo1.jpg" alt="Наше фото 1">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo2.jpg" alt="Наше фото 2">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo3.jpg" alt="Наше фото 3">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo4.jpg" alt="Наше фото 4">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo5.jpg" alt="Наше фото 5">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo6.jpg" alt="Наше фото 6">
+        </div>
+	<div class="photo-card reveal tilt">
+          <img src="images/photo7.jpg" alt="Наше фото 1">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo8.jpg" alt="Наше фото 2">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo9.jpg" alt="Наше фото 3">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo10.jpg" alt="Наше фото 4">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo11.jpg" alt="Наше фото 5">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo12.jpg" alt="Наше фото 6">
+        </div>
+	<div class="photo-card reveal tilt">
+          <img src="images/photo13.jpg" alt="Наше фото 5">
+        </div>
+        <div class="photo-card reveal tilt">
+          <img src="images/photo14.jpg" alt="Наше фото 6">
+        </div>
+      </div>
+    </section>
+
+    <section class="reasons-section">
+      <div class="section-title reveal">
+        <h3>Почему ты особенная 🌷</h3>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="reason-card reveal">
+          <span>😊</span>
+          <h4>Твоя улыбка</h4>
+          <p>Она делает мой день лучше даже без слов.</p>
+        </div>
+
+        <div class="reason-card reveal">
+          <span>💞</span>
+          <h4>Твоя нежность</h4>
+          <p>Рядом с тобой хочется быть добрее и счастливее.</p>
+        </div>
+
+        <div class="reason-card reveal">
+          <span>✨</span>
+          <h4>Твоя энергия</h4>
+          <p>С тобой даже обычные моменты становятся особенными.</p>
+        </div>
+
+        <div class="reason-card reveal">
+          <span>🌙</span>
+          <h4>Твоя забота</h4>
+          <p>Ты — мой уют, тепло и спокойствие.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <div class="final-box reveal">
+        <h3>Это только начало...</h3>
+        <p>
+          2 месяца — это маленькая дата.
+          Но для меня это уже очень ценные воспоминания, чувства и моменты.
+        </p>
+        <p class="big-love">Исломхон ❤️ Дияра — forever mode activated</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img id="lightboxImg" src="" alt="Большое фото">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
