@@ -1,160 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Исломхон ❤️ Дияра</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#09070d" />
+  <title data-i18n="title">Исломхон × Дияра — Наша история</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-blur blur1"></div>
-  <div class="bg-blur blur2"></div>
-  <canvas id="heartsCanvas"></canvas>
+  <div class="noise"></div>
+  <canvas id="loveCanvas" aria-hidden="true"></canvas>
 
-  <header class="hero">
-    <div class="hero-content">
-      <p class="mini-text">Нам уже</p>
-      <h1>2 месяца вместе 💖</h1>
-      <h2>Исломхон & Дияра</h2>
-      <p class="subtitle">
-        Маленький сайт о большой нежности, тёплых моментах и нашей красивой истории ✨
-      </p>
+  <div class="cursor cursor--dot"></div>
+  <div class="cursor cursor--ring"></div>
 
-      <div class="timer-card">
-        <p>Мы вместе уже:</p>
-        <div id="loveTimer" class="timer">2 месяца 0 дней 00:00:00</div>
+  <div id="intro" class="intro">
+    <div class="intro__halo"></div>
+    <div class="language-switcher language-switcher--intro">
+      <button class="language-switcher__button" type="button" data-i18n-aria="languageAria" aria-label="Выбрать язык" aria-expanded="false">
+        <span class="language-switcher__globe">◎</span>
+        <span class="language-switcher__code">RU</span>
+        <span class="language-switcher__chevron">⌄</span>
+      </button>
+      <div class="language-switcher__menu" role="menu">
+        <button type="button" data-lang="ru"><span>RU</span><b>Русский</b></button>
+        <button type="button" data-lang="uz"><span>UZ</span><b>O‘zbekcha</b></button>
+        <button type="button" data-lang="en"><span>EN</span><b>English</b></button>
+        <button type="button" data-lang="tr"><span>TR</span><b>Türkçe</b></button>
       </div>
-
-      <button id="openMessageBtn" class="glow-btn">Открыть секретное послание</button>
     </div>
 
-    <div class="floating-icons">
-      <span>💗</span>
-      <span>✨</span>
-      <span>🌙</span>
-      <span>💫</span>
-      <span>💖</span>
-    </div>
-  </header>
-
-  <main>
-    <section class="love-note hidden-section" id="messageSection">
-      <div class="section-box reveal">
-        <h3>Для Дияры 💌</h3>
-        <p>
-          Дияра, эти 2 месяца стали для меня особенными. 
-          С тобой всё стало ярче, теплее и красивее. 
-          Спасибо тебе за улыбки, за моменты, за твою нежность и за то,
-          что именно ты делаешь мои дни счастливее.
-        </p>
-        <p>
-          Этот маленький сайт — просто напоминание о том, как ты важна для меня.
-          И это только начало нашей прекрасной истории ❤️
-        </p>
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <div class="section-title reveal">
-        <h3>Наши моменты 📸</h3>
-        <p>Самые тёплые кадры, которые хочется пересматривать бесконечно</p>
-      </div>
-
-      <div class="gallery">
-        <div class="photo-card reveal tilt">
-          <img src="images/photo1.jpg" alt="Наше фото 1">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo2.jpg" alt="Наше фото 2">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo3.jpg" alt="Наше фото 3">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo4.jpg" alt="Наше фото 4">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo5.jpg" alt="Наше фото 5">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo6.jpg" alt="Наше фото 6">
-        </div>
-	<div class="photo-card reveal tilt">
-          <img src="images/photo7.jpg" alt="Наше фото 1">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo8.jpg" alt="Наше фото 2">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo9.jpg" alt="Наше фото 3">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo10.jpg" alt="Наше фото 4">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo11.jpg" alt="Наше фото 5">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo12.jpg" alt="Наше фото 6">
-        </div>
-	<div class="photo-card reveal tilt">
-          <img src="images/photo13.jpg" alt="Наше фото 5">
-        </div>
-        <div class="photo-card reveal tilt">
-          <img src="images/photo14.jpg" alt="Наше фото 6">
-        </div>
-      </div>
-    </section>
-
-    <section class="reasons-section">
-      <div class="section-title reveal">
-        <h3>Почему ты особенная 🌷</h3>
-      </div>
-
-      <div class="reasons-grid">
-        <div class="reason-card reveal">
-          <span>😊</span>
-          <h4>Твоя улыбка</h4>
-          <p>Она делает мой день лучше даже без слов.</p>
-        </div>
-
-        <div class="reason-card reveal">
-          <span>💞</span>
-          <h4>Твоя нежность</h4>
-          <p>Рядом с тобой хочется быть добрее и счастливее.</p>
-        </div>
-
-        <div class="reason-card reveal">
-          <span>✨</span>
-          <h4>Твоя энергия</h4>
-          <p>С тобой даже обычные моменты становятся особенными.</p>
-        </div>
-
-        <div class="reason-card reveal">
-          <span>🌙</span>
-          <h4>Твоя забота</h4>
-          <p>Ты — мой уют, тепло и спокойствие.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-section">
-      <div class="final-box reveal">
-        <h3>Это только начало...</h3>
-        <p>
-          2 месяца — это маленькая дата.
-          Но для меня это уже очень ценные воспоминания, чувства и моменты.
-        </p>
-        <p class="big-love">Исломхон ❤️ Дияра — forever mode activated</p>
-      </div>
-    </section>
-  </main>
-
-  <div class="lightbox" id="lightbox">
-    <span class="lightbox-close" id="lightboxClose">&times;</span>
-    <img id="lightboxImg" src="" alt="Большое фото">
+    <p class="eyebrow" data-i18n="introEyebrow">одна история • два сердца</p>
+    <h1>
+      <span data-i18n="name1">Исломхон</span>
+      <i>×</i>
+      <span data-i18n="name2">Дияра</span>
+    </h1>
+    <p class="intro__text" data-i18n="introText">Иногда целая вселенная начинается с одного человека.</p>
+    <button id="enterBtn" class="btn btn--primary">
+      <span data-i18n="enter">Открыть нашу историю</span>
+      <b>♡</b>
+    </button>
+    <p class="intro__hint" data-i18n="introHint">лучше смотреть со звуком</p>
   </div>
 
+  <main id="site" class="site is-hidden">
+    <header class="nav">
+      <a class="brand magnetic" href="#hero" data-i18n="brand">И × Д</a>
+
+      <nav class="nav__links">
+        <a href="#story" data-i18n="navStory">История</a>
+        <a href="#gallery" data-i18n="navGallery">Моменты</a>
+        <a href="#reasons" data-i18n="navLove">Любовь</a>
+      </nav>
+
+
+      <div class="language-switcher language-switcher--nav">
+        <button class="language-switcher__button" type="button" data-i18n-aria="languageAria" aria-label="Выбрать язык" aria-expanded="false">
+          <span class="language-switcher__globe">◎</span>
+          <span class="language-switcher__code">RU</span>
+          <span class="language-switcher__chevron">⌄</span>
+        </button>
+        <div class="language-switcher__menu" role="menu">
+          <button type="button" data-lang="ru"><span>RU</span><b>Русский</b></button>
+          <button type="button" data-lang="uz"><span>UZ</span><b>O‘zbekcha</b></button>
+          <button type="button" data-lang="en"><span>EN</span><b>English</b></button>
+          <button type="button" data-lang="tr"><span>TR</span><b>Türkçe</b></button>
+        </div>
+      </div>
+
+      <button id="musicToggle" class="music-toggle magnetic" data-i18n-aria="musicAria" aria-label="Музыка">
+        <span class="music-toggle__bars"><i></i><i></i><i></i><i></i></span>
+        <span id="musicState" data-i18n="music">музыка</span>
+      </button>
+    </header>
+
+    <section id="hero" class="hero section">
+      <div class="hero__aurora hero__aurora--one"></div>
+      <div class="hero__aurora hero__aurora--two"></div>
+
+      <div class="hero__content reveal">
+        <p class="eyebrow" data-i18n="heroEyebrow">наша маленькая бесконечность</p>
+        <h2 data-i18n-html="heroTitle">
+          Ты — моё <span class="serif-gradient">любимое</span> совпадение
+        </h2>
+        <p class="hero__lead" data-i18n="heroLead">
+          История о двух людях, которым однажды стало теплее просто потому, что они нашли друг друга.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary magnetic" href="#story"><span data-i18n="watchStory">Смотреть историю</span> <span>↓</span></a>
+          <button id="heartBurst" class="btn btn--ghost magnetic"><span data-i18n="sendLove">Отправить любовь</span> ♡</button>
+        </div>
+      </div>
+
+      <div class="hero__photo-wrap reveal reveal--delay">
+        <div class="orbit orbit--one"></div>
+        <div class="orbit orbit--two"></div>
+        <div class="hero__photo tilt-card">
+          <img src="assets/images/hero.jpg" alt="Исломхон и Дияра" />
+          <div class="hero__photo-shine"></div>
+          <span class="photo-tag" data-i18n="photoTag">ты + я, навсегда.</span>
+        </div>
+        <div class="floating-note note-one"><span data-i18n="loveYou">люблю тебя</span> ♡</div>
+        <div class="floating-note note-two" data-i18n="myPerson">мой человек</div>
+      </div>
+
+      <div class="scroll-cue">
+        <span data-i18n="scroll">прокрути</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="marquee-section" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee__track">
+          <span data-i18n="marqueeNames">ИСЛОМХОН ♡ ДИЯРА</span><i>✦</i>
+          <span data-i18n="marqueeStory">НАША ИСТОРИЯ</span><i>✦</i>
+          <span data-i18n="marqueeTogether">ВМЕСТЕ ЛУЧШЕ</span><i>✦</i>
+          <span data-i18n="marqueeNames">ИСЛОМХОН ♡ ДИЯРА</span><i>✦</i>
+          <span data-i18n="marqueeStory">НАША ИСТОРИЯ</span><i>✦</i>
+          <span data-i18n="marqueeTogether">ВМЕСТЕ ЛУЧШЕ</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story section">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="chapterOne">глава первая</p>
+        <h3 data-i18n-html="storyTitle">Как всё <span class="serif-gradient">началось</span></h3>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__line"><span id="timelineProgress"></span></div>
+
+        <article class="moment reveal">
+          <div class="moment__date" data-i18n="moment1Date">01 / НАЧАЛО</div>
+          <div class="moment__card glass tilt-card">
+            <div>
+              <span class="moment__number">01</span>
+              <h4 data-i18n="moment1Title">Наша первая встреча</h4>
+              <p data-i18n="moment1Text">
+                Тот самый день, который тогда казался обычным. Мы ещё не знали, сколько красивых воспоминаний начнётся именно отсюда.
+              </p>
+            </div>
+            <img src="assets/images/story-1.jpg" alt="Наша первая встреча" />
+          </div>
+        </article>
+
+        <article class="moment moment--right reveal">
+          <div class="moment__date" data-i18n="moment2Date">02 / ИСКРА</div>
+          <div class="moment__card glass tilt-card">
+            <img src="assets/images/story-2.jpg" alt="Особенный момент" />
+            <div>
+              <span class="moment__number">02</span>
+              <h4 data-i18n="moment2Title">Когда «мы» стало настоящим</h4>
+              <p data-i18n="moment2Text">
+                Смешные сообщения, долгие разговоры, случайные улыбки — и тот момент, когда стало понятно: это уже не просто знакомство.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="moment reveal">
+          <div class="moment__date" data-i18n="moment3Date">03 / СЕЙЧАС</div>
+          <div class="moment__card glass tilt-card">
+            <div>
+              <span class="moment__number">03</span>
+              <h4 data-i18n="moment3Title">Наше сегодня</h4>
+              <p data-i18n="moment3Text">
+                Не идеальное, не придуманное — наше. С маленькими привычками, поддержкой, теплом и планами, которые хочется осуществлять рядом.
+              </p>
+            </div>
+            <img src="assets/images/story-3.jpg" alt="Наше сегодня" />
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="quote-section section">
+      <div class="quote-orb"></div>
+      <div class="quote reveal">
+        <span>“</span>
+        <p data-i18n-html="quote">
+          Среди миллионов случайностей<br />моё любимое совпадение — <em>ты.</em>
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery section">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="galleryEyebrow">наши кадры</p>
+        <h3 data-i18n-html="galleryTitle">Моменты, которые <span class="serif-gradient">хочется сохранить</span></h3>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-item--tall reveal">
+          <img src="assets/images/gallery-1.jpg" alt="Наш момент 1" />
+          <figcaption><span>01</span> <b data-i18n="galleryCaption1">любимый кадр</b></figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="assets/images/gallery-2.jpg" alt="Наш момент 2" />
+          <figcaption><span>02</span> <b data-i18n="galleryCaption2">здесь было счастье</b></figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="assets/images/gallery-3.jpg" alt="Наш момент 3" />
+          <figcaption><span>03</span> <b data-i18n="galleryCaption3">просто мы</b></figcaption>
+        </figure>
+        <figure class="gallery-item gallery-item--wide reveal">
+          <img src="assets/images/gallery-4.jpg" alt="Наш момент 4" />
+          <figcaption><span>04</span> <b data-i18n="galleryCaption4">одна из наших историй</b></figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="assets/images/gallery-5.jpg" alt="Наш момент 5" />
+          <figcaption><span>05</span> <b data-i18n="galleryCaption5">навсегда в памяти</b></figcaption>
+        </figure>
+		<figure class="gallery-item reveal">
+          <img src="assets/images/gallery-6.jpg" alt="Наш момент 6" />
+          <figcaption><span>06</span> <b data-i18n="galleryCaption6">навсегда в памяти</b></figcaption>
+        </figure>
+		<figure class="gallery-item reveal">
+          <img src="assets/images/gallery-7.jpg" alt="Наш момент 7" />
+          <figcaption><span>07</span> <b data-i18n="galleryCaption7">навсегда в памяти</b></figcaption>
+        </figure>
+		<figure class="gallery-item gallery-item--wide reveal">
+          <img src="assets/images/gallery-8.jpg" alt="Наш момент 8" />
+          <figcaption><span>08</span> <b data-i18n="galleryCaption8">одна из наших историй</b></figcaption>
+        </figure>
+		<figure class="gallery-item reveal">
+          <img src="assets/images/gallery-9.jpg" alt="Наш момент 9" />
+          <figcaption><span>09</span> <b data-i18n="galleryCaption9">навсегда в памяти</b></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="reasons" class="reasons section">
+      <div class="section-heading section-heading--center reveal">
+        <p class="eyebrow" data-i18n="reasonsEyebrow">несколько причин</p>
+        <h3 data-i18n-html="reasonsTitle">Почему я выбираю <span class="serif-gradient">тебя</span></h3>
+      </div>
+
+      <div class="reason-stack">
+        <article class="reason-card glass reveal">
+          <span>01</span>
+          <h4 data-i18n="reason1Title">Рядом с тобой я дома</h4>
+          <p data-i18n="reason1Text">Не место делает дом домом. Иногда это голос, взгляд и человек.</p>
+        </article>
+        <article class="reason-card glass reveal">
+          <span>02</span>
+          <h4 data-i18n="reason2Title">Ты делаешь обычное особенным</h4>
+          <p data-i18n="reason2Text">Даже самый простой день становится воспоминанием, если мы проживаем его вместе.</p>
+        </article>
+        <article class="reason-card glass reveal">
+          <span>03</span>
+          <h4 data-i18n="reason3Title">С тобой хочется будущего</h4>
+          <p data-i18n="reason3Text">Не идеального сценария — настоящего. Нашего. Шаг за шагом.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="love-letter section">
+      <div class="letter glass reveal">
+        <p class="eyebrow" data-i18n="letterEyebrow">для тебя</p>
+        <h3 data-i18n="letterTitle">Если ты читаешь это…</h3>
+        <div class="letter__body">
+          <p data-i18n="letterP1">
+            Я хотел сохранить здесь хотя бы маленькую часть того, что чувствую рядом с тобой.
+          </p>
+          <p data-i18n="letterP2">
+            Спасибо за наши разговоры, за улыбки, за моменты, которые понимаем только мы, и за то, что в моей жизни есть человек, о котором хочется рассказывать не словами, а целым сайтом.
+          </p>
+          <p class="letter__signature"><span data-i18n="signature">Твой Исломхон</span> ♡</p>
+        </div>
+
+        <button id="secretBtn" class="btn btn--primary magnetic" data-i18n="secretButton">
+          Нажми, если любишь меня
+        </button>
+        <div id="secretMessage" class="secret-message" data-i18n-html="secretMessage">
+          Тогда у меня для тебя только одно сообщение:<br />
+          <strong>я бы выбрал тебя снова. И снова. И снова. ♡</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="counter-section section reveal">
+      <p class="eyebrow" data-i18n="counterEyebrow">и это только начало</p>
+      <h3 data-i18n="counterTitle">Мы создаём воспоминания уже</h3>
+      <div id="loveCounter" class="counter">
+        <div><strong id="days">000</strong><span data-i18n="days">дней</span></div>
+        <div><strong id="hours">00</strong><span data-i18n="hours">часов</span></div>
+        <div><strong id="minutes">00</strong><span data-i18n="minutes">минут</span></div>
+        <div><strong id="seconds">00</strong><span data-i18n="seconds">секунд</span></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <span class="footer__heart">♡</span>
+        <p data-i18n-html="footerMade">Сделано с любовью для <strong>Дияры</strong></p>
+      </div>
+      <p data-i18n="footerText">Исломхон × Дияра • навсегда немного больше, чем просто слова</p>
+    </footer>
+  </main>
+
+  <aside id="player" class="player">
+    <button id="playerPlay" class="player__play" data-i18n-aria="playAria" aria-label="Пауза/воспроизведение">▶</button>
+    <div class="player__meta">
+      <small data-i18n="nowPlaying">сейчас играет</small>
+      <strong id="trackName" data-i18n-default-track="true">Наша песня</strong>
+      <div class="player__progress"><span id="trackProgress"></span></div>
+    </div>
+    <button id="playerNext" class="player__next" data-i18n-aria="nextAria" aria-label="Следующая песня">→</button>
+  </aside>
+
+  <audio id="audio"></audio>
   <script src="script.js"></script>
 </body>
 </html>
